@@ -64,25 +64,35 @@
                 required
               />
             </div>
-            <div class="input">
-              <label for="email">Email *</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Your email address"
-                required
-              />
+            <div class="input-group">
+              <div class="input">
+                <label for="email">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your email address"
+                  required
+                />
+              </div>
+              <div class="input">
+                <label for="phone">Phone *</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Contact phone number"
+                  required
+                />
+              </div>
             </div>
             <div class="input">
-              <label for="phone">Phone *</label>
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                placeholder="Contact phone number"
-                required
-              />
+              <label for="projects">Projects Link (one or many...)</label>
+              <textarea
+                name="projects"
+                id="projects"
+                placeholder="Github / Gitlab / any other"
+              ></textarea>
             </div>
             <div class="message"></div>
             <div class="button-container">
@@ -96,7 +106,7 @@
           <p>
             You have successfully registered for
             <strong>Hacktoberfest NITC</strong>. The schedule for the event can
-            be seen the <a class="link" href="/">event homepage</a>. Please
+            be seen the <a class="link" href="/#schedule">event homepage</a>. Please
             complete the registration in the MLH website.
           </p>
           <div class="button-container">

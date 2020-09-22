@@ -116,7 +116,12 @@ h2 {
     transform: translate(24px, 0);
   }
 }
-
+.input-group {
+  display: flex;
+}
+.input-group .input:first-of-type {
+  margin-right: 5px;
+}
 .input {
   display: flex;
   flex-direction: column;
@@ -126,16 +131,20 @@ h2 {
   margin-bottom: 15px;
   margin-left: 15px;
 }
-.input input {
+.input input, .input textarea  {
   font-size: 1rem;
   font-family: var(--primary-font);
   color: var(--text-color);
   background-color: var(--blue-input-color);
   border: none;
-  padding: 0 20px;
+  padding: 10px 20px;
   height: 60px;
   border-radius: 30px;
   width: 100%;
+}
+
+.input textarea {
+  height: 120px;
 }
 .button-container {
   display: flex;
