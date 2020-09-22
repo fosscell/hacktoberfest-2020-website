@@ -5,22 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hacktoberfest Registration</title>
 
-    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <link rel="icon" type="image/png" href="../assets/images/icon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/images/hacktoberfext-icon.png"
+    />
     <link
       rel="stylesheet"
-      href="../assets/fonts/Inter-3.15/Inter Web/inter.css"
+      href="/assets/fonts/Inter-3.15/Inter Web/inter.css"
     />
-    <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/register.css" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <link rel="stylesheet" href="/style/register.css" />
   </head>
   <body>
+    <header>
+      <div class="left">
+        <div class="logo">
+          <a href="/">
+            <img src="/assets/images/hacktoberfext-icon.png" />
+          </a>
+        </div>
+        <nav class="main">
+          <a href="/" class="link">Home</a>
+          <a href="/register" class="link">Register</a>
+          <a href="/#schedule" class="link">Schedule</a>
+        </nav>
+      </div>
+      <div class="right">
+        <a class="button disabled hidden-small">Join</a>
+      </div>
+    </header>
     <main>
       <div class="left">
-        <img class="banner" src="../assets/images/banner.svg" />
+        <img class="banner" src="/assets/images/banner.svg" />
       </div>
       <div class="right">
         <div class="page one">
+          <h1>Register for Hacktoberfest NITC</h1>
           <form name="register">
             <div class="input">
               <label for="name">Name *</label>
@@ -74,11 +96,17 @@
           <p>
             You have successfully registered for
             <strong>Hacktoberfest NITC</strong>. The schedule for the event can
-            be seen the <a class="link" href="../">event homepage</a>. Please
+            be seen the <a class="link" href="/">event homepage</a>. Please
             complete the registration in the MLH website.
           </p>
           <div class="button-container">
-            <a class="button" href="#">Register at MLH</a>
+            <a
+              class="button"
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://organize.mlh.io/participants/events/4608-hacktoberfest-nit-calicut"
+              >Register at MLH</a
+            >
           </div>
           <p>
             We will contact you by mail for important notifications. You can
@@ -88,7 +116,7 @@
           <div class="button-container">
             <a
               class="button"
-              href="https://discord.gg/StrDURM"
+              href="https://discord.gg/HPaPmth"
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -99,7 +127,7 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 class="injected-svg"
-                data-src="../assets/images/discord.svg"
+                data-src="/assets/images/discord.svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
               >
                 <path
@@ -114,6 +142,20 @@
       </div>
     </main>
 
-    <script src="../script/register.js"></script>
+    <footer>
+      <img class="logo" src="/assets/images/fosscell-banner.png" />
+      <div>
+        <span>Hacktoberfest NITC</span>
+        <nav class="footer-nav">
+          <a class="link" href="/">Home</a>
+          |
+          <a class="link" href="/register">Register</a>
+          |
+          <a class="link" href="/#schedule">Schedule</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="/script/register.js"></script>
   </body>
 </html>

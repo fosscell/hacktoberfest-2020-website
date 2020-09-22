@@ -42,7 +42,7 @@ registerFormElem.addEventListener("submit", async (e) => {
     const details = { name, email, rollNo, phone };
 
     try {
-      const res = await fetch("../api/register.php", {
+      const res = await fetch("/api/register.php", {
         method: "POST",
         body: JSON.stringify(details),
       });
