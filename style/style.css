@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg: #072540;
+  --text-color: #93c2db;
+  --title-color: #ffffff;
+  --primary-button: #0069ff;
+  --primary-color: #ff8ae2;
+  --primary-dark-color: #9c4668;
+  --blue-input-color: #183d5d;
+
+  --primary-font: "Inter", sans-serif;
+  font-size: 17px;
+}
+body {
+  font-family: var(--primary-font);
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-color);
+}
+
+p {
+  line-height: 30px;
+}
+
+h2 {
+  margin: 20px 0 20px 0;
+}
+
+.pink {
+  color: var(--primary-color);
+}
+
+.link {
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--primary-button);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.input label {
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+.input input {
+  font-size: 1rem;
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  background-color: var(--blue-input-color);
+  border: none;
+  padding: 0 20px;
+  height: 60px;
+  border-radius: 30px;
+  width: 100%;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.injected-svg {
+  margin-right: 10px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 60px;
+  border-radius: 30px;
+  padding: 0 60px;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  background-color: var(--primary-button);
+  color: var(--title-color);
+  border: none;
+  transition: background-color 300ms ease-in-out;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.button svg,
+.button svg path {
+  fill: var(--title-color);
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+}
