@@ -6,13 +6,15 @@ main {
 
 main .left {
   display: flex;
-  justify-content: center;
-  margin: 40px 0;
+  flex-direction: column;
+  align-items: center;
 }
 
 main .left .banner {
+  margin: 40px 0;
   width: 95%;
   max-width: 500px;
+  text-align: center;
 }
 
 main .right {
@@ -34,6 +36,31 @@ main .right .page.one {
   display: block;
 }
 
+main .left .banner .hacktoberfest-banner {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+main .banner-text {
+  font-size: 1.2rem;
+}
+
+main .banner-row {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+main .fosscell-banner {
+  width: 50%;
+  align-self: center;
+}
+
+main .csea-banner {
+  width: 20%;
+}
+
 h2 {
   font-size: 2rem;
 }
@@ -53,7 +80,7 @@ h1 {
 
   main .left {
     flex: 1;
-    margin: 0;
+    margin: 100px 0 0 0;
   }
 
   main .right {
