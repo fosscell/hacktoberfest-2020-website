@@ -2,9 +2,9 @@ section.banner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
   width: 95vw;
   max-width: 500px;
+  margin: 40px auto;
 }
 
 section.banner .hacktoberfest-banner {

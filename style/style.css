@@ -131,7 +131,8 @@ h2 {
   margin-bottom: 15px;
   margin-left: 15px;
 }
-.input input, .input textarea  {
+.input input,
+.input textarea {
   font-size: 1rem;
   font-family: var(--primary-font);
   color: var(--text-color);
@@ -165,7 +166,7 @@ h2 {
   text-transform: uppercase;
   height: 60px;
   border-radius: 30px;
-  padding: 0 60px;
+  padding: 0 30px;
   font-family: var(--primary-font);
   font-weight: 600;
   background-color: var(--primary-button);
@@ -246,6 +247,10 @@ footer span {
 }
 
 @media (min-width: 900px) {
+  .button {
+    padding: 0 50px;
+  }
+
   footer div {
     flex-direction: row;
     align-items: unset;
