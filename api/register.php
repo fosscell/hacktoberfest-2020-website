@@ -35,6 +35,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ret(400, "Projects limit is 1000 characters");
     }
 
+    try {
+        send_mail($email, "Welcome to Hacktoberfest NITC", $name, $SENDGRID_API_KEY);
+    } catch (Exception $e) {
+        
+    }
+
     // prepare and bind
     $stmt = $conn->prepare("INSERT INTO {$db_table_name} (name, email, phone, rollNo, projects) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $name, $email, $phone, $rollNo, $projects);
