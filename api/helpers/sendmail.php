@@ -36,7 +36,7 @@ function send_mail($to_address, $subject, $name, $SENDGRID_API_KEY) {
 }
 
 function get_mail_template($name, $onlyText = false) {
-    $message = "Hi %name%,\nYou're now registered for Hacktoberfest NITC\n\nComplete registration for the event at MLH: https://organize.mlh.io/participants/events/4608-hacktoberfest-nit-calicut. \nJoin the community Discord server: https://discord.gg/StrDURM\n";
+    $message = "Hi %name%,\nYou're now registered for Hacktoberfest NITC\n\nComplete registration for the event at MLH: https://organize.mlh.io/participants/events/4608-hacktoberfest-nit-calicut. \nJoin the community Discord server: https://discord.gg/Ys4z5SF\n";
     if (!$onlyText) {
         $message = file_get_contents(__DIR__ . "/email/template-1.html");
     }
