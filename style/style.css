@@ -165,7 +165,7 @@ h2 {
   justify-content: center;
   cursor: pointer;
   text-transform: uppercase;
-  height: 60px;
+  height: 50px;
   border-radius: 30px;
   padding: 0 30px;
   font-family: var(--primary-font);
@@ -207,13 +207,14 @@ header .left {
   align-items: center;
 }
 header .logo img {
-  width: 80px;
-  margin-right: 20px;
+  width: 50px;
+  margin-right: 10px;
 }
 
 nav.main .link {
   color: var(--text-color);
-  padding: 20px 10px;
+  padding: 20px 5px;
+  font-size: 0.9rem;
 }
 
 footer {
@@ -250,6 +251,18 @@ footer span {
 @media (min-width: 900px) {
   .button {
     padding: 0 50px;
+    height: 60px;
+  }
+
+  header .logo img {
+    width: 80px;
+    margin-right: 20px;
+  }
+  
+  nav.main .link {
+    color: var(--text-color);
+    padding: 20px 10px;
+    font-size: 1rem;
   }
 
   footer div {
