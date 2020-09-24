@@ -107,6 +107,42 @@ section.description .image-container img {
   max-width: 500px;
 }
 
+section.timer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section.timer .time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-input-color);
+  width: 200px;
+  height: 130px;
+  margin: 10px;
+  border-radius: 35px 0 35px 0;
+}
+
+section.timer .time:nth-child(2n) {
+  border-radius: 0 35px 0 35px;
+}
+
+section.timer .time .value {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--title-color);
+}
+
+section.timer .time .division {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
 @media (min-width: 900px) {
   section.description {
     flex-direction: row;
