@@ -3,7 +3,7 @@ session_start();
 require_once("helpers/loadall.php");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $securimage = new Securimage(["captcha_type" => Securimage::SI_CAPTCHA_MATHEMATIC]);
+    $securimage = new Securimage();
 
     $conn = connect($db_host, $db_user, $db_password, $db_name);
 
