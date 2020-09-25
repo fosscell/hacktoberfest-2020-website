@@ -39,8 +39,9 @@ registerFormElem.addEventListener("submit", async (e) => {
     const rollNo = document.getElementById("rollno").value;
     const phone = document.getElementById("phone").value;
     const projects = document.getElementById("projects").value;
+    const captcha = document.getElementById("captcha").value;
 
-    const details = { name, email, rollNo, phone, projects };
+    const details = { name, email, rollNo, phone, projects, captcha };
 
     try {
       const res = await fetch("/api/register.php", {

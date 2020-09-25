@@ -104,6 +104,14 @@
                 placeholder="Github / Gitlab / any other"
               ></textarea>
             </div>
+            <div class="input">
+              <label for="captcha">Captcha</label>
+              <a href="#" class="link" onclick="document.getElementById('captcha-2').src = '/vendor/dapphp/securimage/securimage_show.php?' + Math.random(); return false">[ Change ]</a>
+              <div style="display: flex; flex-direction: row;">
+                <img id="captcha-2" src="/vendor/dapphp/securimage/securimage_show.php" alt="CAPTCHA Image" />
+                <input type="text" id="captcha" name="captcha" size="10" maxlength="6" />
+              </div>
+            </div>
             <div class="message"></div>
             <div class="button-container">
               <button class="button" type="submit">Register</button>

@@ -1,7 +1,10 @@
 <?php
+session_start();
 require_once("helpers/loadall.php");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $securimage = new Securimage(["captcha_type" => Securimage::SI_CAPTCHA_MATHEMATIC]);
+
     $conn = connect($db_host, $db_user, $db_password, $db_name);
 
     $post = [];
@@ -14,6 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $post["email"];
     $phone = $post["phone"];
     $projects = $post["projects"];
+    $captcha = $post["captcha"];
+
+    if ($securimage->check($captcha) == false) {
+        ret(400, "Entered captcha is not correct");
+    }
 
     if (empty($name) || !preg_match('/[a-zA-Z. ]/', $name) || strlen($name) > 255) {
         ret(400, "Name is empty / invalid");
