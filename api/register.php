@@ -1,7 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 require_once("helpers/loadall.php");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -16,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $rollNo = $post["rollNo"];
     $email = $post["email"];
     $phone = $post["phone"];
+    $projects = $post["projects"];
 
     if (empty($name) || !preg_match('/[a-zA-Z. ]/', $name) || strlen($name) > 255) {
         ret(400, "Name is empty / invalid");
@@ -30,9 +28,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ret(400, "Phone is empty / invalid");
     }
 
+    if (!empty($projects) && strlen($projects) > 1000) {
+        ret(400, "Projects limit is 1000 characters");
+    }
+
+    try {
+        send_mail($email, "Welcome to Hacktoberfest NITC", $name, $SENDGRID_API_KEY);
+    } catch (Exception $e) {
+        
+    }
+
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO {$db_table_name} (name, email, phone, rollNo) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $name, $email, $phone, $rollNo);
+    $stmt = $conn->prepare("INSERT INTO {$db_table_name} (name, email, phone, rollNo, projects) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $name, $email, $phone, $rollNo, $projects);
     $stmt->execute();
 
     $stmt->close();
