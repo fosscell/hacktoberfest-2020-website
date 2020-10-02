@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $post = [];
     if (($raw_post = file_get_contents("php://input")) !== "" && !($post = json_decode($raw_post, JSON_UNESCAPED_SLASHES))) {
-        ret(404, "Invalid JSON Given");
+        ret(400, "Invalid JSON Given");
     }
 
     $name = $post["name"];
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // prepare and bind
-    $stmt = $conn->prepare("INSERT INTO {$db_table_name} (name, email, phone, rollNo, projects) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO {$db_table_name["participants"]} (name, email, phone, rollNo, projects) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $name, $email, $phone, $rollNo, $projects);
     $stmt->execute();
 

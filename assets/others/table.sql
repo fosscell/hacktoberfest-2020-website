@@ -7,3 +7,9 @@ CREATE TABLE IF NOT EXISTS 2020_participants (
     projects VARCHAR(1000) NULL,
     created DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS 2020_live (
+    isLive VARCHAR(5) NOT NULL default "false"
+);
+
+INSERT INTO 2020_live (isLive) VALUES ("false");
